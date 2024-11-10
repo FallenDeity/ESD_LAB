@@ -10,9 +10,9 @@
 
 #include <stdbool.h>
 
-#define RS_CTRL 27  // Register select, P0.27
-#define EN_CTRL 28  // Enable, P0.28
-#define DT_CTRL 23  // Data lines, P0.23 - P0.26
+#define RS_CTRL 27// Register select, P0.27
+#define EN_CTRL 28// Enable, P0.28
+#define DT_CTRL 23// Data lines, P0.23 - P0.26
 
 #define LCD_MODE LCD_4_BIT_MODE
 #define LCD_2_ROWS 0x08
@@ -28,26 +28,26 @@ typedef enum {
 } ShiftDirection;
 
 typedef enum {
-    LCD_CLEAR_DISPLAY = 0x01,  // Clear display
-    LCD_RETURN_HOME = 0x02,  // Return home, basically move cursor to 0,0
-    LCD_DEC_CURSOR = 0x04,  // Make cursor move left after writing
-    LCD_INC_CURSOR = 0x06,  // Make cursor move right after writing
-    LCD_SHIFT_ROW_LEFT = 0x07,  // Shift row left
-    LCD_SHIFT_ROW_RIGHT = 0x05,  // Shift row right
-    LCD_DISPLAY_ON = 0x0C,  // Turn on display
-    LCD_DISPLAY_OFF = 0x08,  // Turn off display
-    LCD_CURSOR_ON = 0x0A,  // Turn on cursor
-    LCD_CURSOR_OFF = 0x0C,  // Turn off cursor
-    LCD_CURSOR_BLINK_ON = 0x0E,  // Turn on cursor blink
-    LCD_CURSOR_BLINK_OFF = 0x0C,  // Turn off cursor blink
-    LCD_SHIFT_CURSOR_LEFT = 0x10,  // Shift cursor left, i.e. backspace
-    LCD_SHIFT_CURSOR_RIGHT = 0x14,  // Shift cursor right, i.e. space
-    LCD_SHIFT_DISPLAY_LEFT = 0x18,  // Shift display left, i.e. scroll left
+    LCD_CLEAR_DISPLAY = 0x01,        // Clear display
+    LCD_RETURN_HOME = 0x02,          // Return home, basically move cursor to 0,0
+    LCD_DEC_CURSOR = 0x04,           // Make cursor move left after writing
+    LCD_INC_CURSOR = 0x06,           // Make cursor move right after writing
+    LCD_SHIFT_ROW_LEFT = 0x07,       // Shift row left
+    LCD_SHIFT_ROW_RIGHT = 0x05,      // Shift row right
+    LCD_DISPLAY_ON = 0x0C,           // Turn on display
+    LCD_DISPLAY_OFF = 0x08,          // Turn off display
+    LCD_CURSOR_ON = 0x0A,            // Turn on cursor
+    LCD_CURSOR_OFF = 0x0C,           // Turn off cursor
+    LCD_CURSOR_BLINK_ON = 0x0E,      // Turn on cursor blink
+    LCD_CURSOR_BLINK_OFF = 0x0C,     // Turn off cursor blink
+    LCD_SHIFT_CURSOR_LEFT = 0x10,    // Shift cursor left, i.e. backspace
+    LCD_SHIFT_CURSOR_RIGHT = 0x14,   // Shift cursor right, i.e. space
+    LCD_SHIFT_DISPLAY_LEFT = 0x18,   // Shift display left, i.e. scroll left
     LCD_SHIFT_DISPLAY_RIGHT = 0x1C,  // Shift display right, i.e. scroll right
-    LCD_FORCE_CURSOR_1ST_LINE = 0x80,  // Force cursor to 1st line, 0th position
-    LCD_FORCE_CURSOR_2ND_LINE = 0xC0,  // Force cursor to 2nd line, 0th position
-    LCD_8_BIT_MODE = 0x30,  // 8 bit mode
-    LCD_4_BIT_MODE = 0x20,  // 4 bit mode
+    LCD_FORCE_CURSOR_1ST_LINE = 0x80,// Force cursor to 1st line, 0th position
+    LCD_FORCE_CURSOR_2ND_LINE = 0xC0,// Force cursor to 2nd line, 0th position
+    LCD_8_BIT_MODE = 0x30,           // 8 bit mode
+    LCD_4_BIT_MODE = 0x20,           // 4 bit mode
 } LCDCommand;
 
 void lcd_init(void);
@@ -98,4 +98,4 @@ int lcd_shift_display(ShiftDirection direction);
 
 int lcd_shift_cursor(ShiftDirection direction);
 
-#endif //ESD_LIQUID_CRYSTAL_H
+#endif//ESD_LIQUID_CRYSTAL_H

@@ -7,9 +7,9 @@
 
 #include "LPC17xx.h"
 
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 void delay(uint32_t delay_ms);
 
@@ -25,4 +25,4 @@ uint32_t millis();
 
 char *format_time(uint32_t time);
 
-#endif //ESD_UTILITY_H
+#endif//ESD_UTILITY_H

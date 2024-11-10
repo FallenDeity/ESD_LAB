@@ -1,13 +1,13 @@
 #include "LPC17xx.h"
-#include "leds/led.h"
 #include "buzzer/buzzer.h"
-#include "utils/utility.h"
 #include "keypad/keymatrix.h"
 #include "lcd/liquid_crystal.h"
+#include "leds/led.h"
+#include "utils/utility.h"
 
 #include <stdlib.h>
 
-#define LEVEL_DURATION (60 * 1000) // 60 seconds
+#define LEVEL_DURATION (60 * 1000)// 60 seconds
 
 /*
  * Occupied pins:

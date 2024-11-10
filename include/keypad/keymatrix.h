@@ -14,12 +14,12 @@
 #define COLS 4
 #define DefaultKey 'x'
 
-#define ROW_LINES 10  // P2.10 - P2.13
-#define COL_LINES 23  // P1.23 - P1.26
+#define ROW_LINES 10// P2.10 - P2.13
+#define COL_LINES 23// P1.23 - P1.26
 
 uint8_t keypad_get_key(void);
 
 void keypad_init(void);
 
 
-#endif //ESD_KEYMATRIX_H
+#endif//ESD_KEYMATRIX_H

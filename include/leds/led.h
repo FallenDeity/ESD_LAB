@@ -8,8 +8,8 @@
 #include "LPC17xx.h"
 #include "utils/utility.h"
 
-#include <stdint.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 #define LED_LINE 4
 
@@ -38,4 +38,4 @@ void mole_update();
 
 bool mole_active(int id);
 
-#endif //ESD_LED_H
+#endif//ESD_LED_H
